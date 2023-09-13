@@ -58,7 +58,7 @@
         <div class="col-2">
           <div class="row">
             <div class="card border border-black">
-              <form>
+              <form id="searchForm">
                 <div class="mb-3">
                   <label for="origincity" class="form-label">Origin City</label>
                   <input
@@ -66,6 +66,7 @@
                     class="form-control"
                     id="origincity"
                     aria-describedby="emailHelp"
+                    name="from"
                   />
                   <label for="destinationcity" class="form-label"
                     >Destination City</label
@@ -75,17 +76,28 @@
                     class="form-control"
                     id="destinationcity"
                     aria-describedby="emailHelp"
+                    name="to"
                   />
                 </div>
                 <div class="mb-3">
                   <label for="departuredate" class="form-label"
                     >Departure date</label
                   >
-                  <input type="date" class="form-control" id="departuredate" />
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="departuredate"
+                    name="depart_date"
+                  />
                 </div>
                 <div class="mb-3">
                   <label for="returndate" class="form-label">Return date</label>
-                  <input type="date" class="form-control" id="returndate" />
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="returndate"
+                    name="arrive_date"
+                  />
                 </div>
                 <div class="input-group mb-3">
                   <label class="input-group-text" for="inputGroupSelect01"
@@ -108,6 +120,8 @@
             <div class="card border border-black">
               <p>Refine flight search</p>
               <input
+                id="price_in_rupees"
+                name="price_in_rupees"
                 type="range"
                 value="0"
                 min="1000"
@@ -129,13 +143,14 @@
           </div>
           <div class="row">
             <div class="col">
-              <div class="card" id="cardContainer"></div>
+              <div class="card" id="resultContainer"></div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
+    <script src="search.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
